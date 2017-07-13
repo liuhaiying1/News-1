@@ -1,0 +1,95 @@
+ #header {
+    margin:0;
+    padding:0;
+    height:60px;	
+    font-size:40px;
+} 
+
+.title{
+	font-weight:bold;
+	font-style:oblique;
+	font-family:"Times New Roman";
+	font-size:36px;
+}
+.title_p{
+	font-style:oblique;
+	font-family:"Times New Roman";
+	font-size:66px;
+	font-weight:bold;
+}
+
+.bt{
+    padding-left:800px;
+	font-size:22px;
+	
+}
+#head {
+	height:100px;
+	color:white;
+	text-align:center;	
+}
+
+
+.pstyle{
+	margin-left:300px;
+	margin-right:300px;
+	width:60%;
+	height:600px;
+}
+
+
+
+.wrap {
+	background-image: url('../images/2.jpg');
+
+}
+
+.mainBox {
+	background-color: #ffffff;
+	margin: 0 auto;
+	box-shadow: 0 0 4px #cccccc;
+	margin-top: 10px;
+	overflow: hidden;
+    opacity:0.7; 
+}
+
+
+
+
+.infoList li {
+	
+	width: 280px;
+	padding: 0 14px 0 13px;
+	height: 250px;
+	margin-bottom: 10px;
+	float: left;
+	overflow: hidden;
+	
+}
+
+.infoList .pic {
+	
+	width: 280px;
+	height: 160px;
+} 
+
+.infoList .pic img {
+	
+	width: 280px;
+	height: 180px;
+}
+ 
+.infoList .tit {
+	color:#000;
+	height: 48px;
+	overflow: hidden;
+	margin: 25px 0 10px 0;
+	line-height: 20px;
+	font-size: 18px;
+}
+
+.infoList {
+	
+	overflow: hidden;
+	clear: both;
+}

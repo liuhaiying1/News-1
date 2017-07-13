@@ -1,0 +1,99 @@
+:not(font){
+	font-family: "weiruanyahei";
+}
+p {
+	text-indent: 20px;
+}
+p img{
+	position:relative;
+	left:-20px;
+}
+button{
+	border: none;
+	outline: none;
+}
+#contentDiv h1 {
+	text-align: center;
+}
+
+.zanPng{
+	float:right;
+	width:20px;
+	height:20px;
+}
+
+div{
+	margin: 30px;
+}
+
+body{
+	background-color: #F5F5F5;
+	background-image: url(../images/back.jpg);
+}
+
+#topDiv{
+	width: auto;
+	height: 240px;
+	background-image: url(../images/head2.jpg);
+	font-family:'hdjxytbcad5e01218b25';
+	font-size:60px;
+	
+}
+
+#logo{
+	position: relative;
+	top: 30px;
+	left: 40px;
+	color: #4c7ed6;
+}
+
+
+
+#middleDiv {
+	width: 1080px;
+	height: 100%;
+	margin: 0 auto;
+	background-color: white;
+	overflow: hidden;
+}
+
+#contentDiv {
+	width: 60%;
+	background-color: white;
+	float: left;
+}
+
+#articleDiv{
+	background-color: white;
+	float: right;
+}
+
+#articleDiv img{
+	width: 300px;
+}
+
+#commentDiv{
+	position: relative;
+	width: 60%;
+	min-height: 300px;
+	
+}
+
+#contentDiv img {
+	width: 100%;
+	
+}
+
+#bottleDiv{
+}
+
+font.account{
+	color: #4c7ed6;
+}
+#articleDiv textarea{
+	outline:none;
+	border:none;
+	font-size:14px;
+	width:300px;
+	resize:none;
+}

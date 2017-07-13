@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.news.dao.CommentDao"><!-- namespace绑定DAO接口 -->
+
+	<insert id="addComment" parameterType="com.news.model.Comment">
+		insert into comments(ID,account,content,date) values(#{ID},#{account},#{content},#{date})
+	</insert>
+	
+	
+
+	<select id="getCommentsByID" resultType="com.news.model.Comment">
+		select * from comments where ID = #{ID} order by date desc
+	</select>
+	
+	<delete id="deleteComment">
+		delete from comments where comment_id = #{comment_id}
+	</delete>
+	
+	<update id="updateZan">
+		UPDATE comments SET zan=#{zan} WHERE comment_id=#{comment_id};
+	</update>
+</mapper>

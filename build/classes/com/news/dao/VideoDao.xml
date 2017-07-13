@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.news.dao.VideoDao"><!-- namespace绑定DAO接口 -->
+
+   <insert id="addVideo" parameterType="com.news.model.Video">
+   insert into videos(title,content,img) values(#{title},#{content},#{img})
+   </insert>
+   
+   <select id="getVideos" resultType="com.news.model.Video">
+		select * from videos
+	</select>
+	
+	<select id="getVideoByID" resultType="com.news.model.Video">
+		select * from videos WHERE video_id = #{ID}
+	</select>
+	
+	<delete id="clearVideos">
+		delete from videos
+	</delete>
+</mapper>

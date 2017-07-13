@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.news.dao.UserDao"><!-- namespace绑定DAO接口 -->
+
+	<insert id="register" parameterType="com.news.model.User">
+		insert into user(account,password) values(#{account},#{password})
+	</insert>
+
+	<select id="getUserByName" resultType="com.news.model.User">
+		select* from user where account=#{account}
+	</select>
+	<delete id="deleteAccount" parameterType="String">
+		delete from user where account=#{account}
+	</delete>
+	<update id="updateKeywords">
+		update user set keywords = #{keywords} WHERE account= #{account}
+	</update>
+</mapper>

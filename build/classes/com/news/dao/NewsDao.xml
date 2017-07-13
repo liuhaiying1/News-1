@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.news.dao.NewsDao"><!-- namespace绑定DAO接口 -->
+
+   <insert id="addNews" parameterType="com.news.model.News">
+   insert into news(img,title,preview,content,keywords,author,date) values(#{img},#{title},#{preview},#{content},#{keywords},#{author},#{date})
+   </insert>
+   
+   <select id="getNews" resultType="com.news.model.News">
+		select * from news
+	</select>
+	
+	<select id="getNewsByID" resultType="com.news.model.News">
+		select * from news WHERE ID = #{ID}
+	</select>
+	
+	<delete id="clearNews">
+		delete from news
+	</delete>
+</mapper>

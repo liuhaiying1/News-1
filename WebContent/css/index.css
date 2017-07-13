@@ -1,0 +1,357 @@
+body{
+    background: url('../images/back.jpg') ;
+	/*min-width: 1200px;*/
+	/*overflow: hidden;*/
+}
+*{
+	margin: 0;
+	padding: 0;
+}
+
+ul li{
+	 life-style:none;
+	 }
+
+.header
+{	
+	positive:absolute;
+	margin:0 auto;
+    height:200px;
+    width:100%;
+	margin-bottom:10px;
+	border-bottom:2px solid #c0c0c0;
+}
+
+.header img
+{
+	margin:0 auto;
+	height:200px;
+	width:100%;
+	overflow:hidden;
+}
+
+.sign
+{	
+	position:relative;
+	margin:0 auto;
+	height:50px;
+	width:1200px;
+	border-bottom:2px solid #c0c0c0;
+	background:#d2d2d2;
+}
+ 
+.sign .left
+{
+	display:inline-block;
+	width:800px;
+	height:50px;
+	float:left;
+}
+
+
+.sign .right
+{
+	display:inline-block;
+    width:400px;
+	height:50px;
+	float:left;
+	/* text-align:center; */
+}
+
+
+.sign a:hover
+{
+	color:red;	
+}
+
+.sign .login_span,.register_span
+{	 
+	
+    font-size:17px;    
+}
+
+.sign .update_span
+{
+	font-size:20px;
+    position:relative;
+    width:150px;
+    display:inline-block;
+    float:left;
+    margin-left:0;
+}
+
+.sign .video_span
+{
+   position:relative;
+   display:inline-block;
+   width:150px;
+   float:left;
+   font-size:20px;	
+}
+
+.sign .exit_span
+{
+    position:relative;
+    display:inline-block;
+    float:right;
+    width:100px;    
+	font-size:20px;
+	text-align:right;
+	display:none; 
+}
+
+.sign span:hover
+{
+	color:red;
+}
+
+/*content*/
+.content
+{
+	margin:0 auto;
+	background:#ffffff;
+	zoom: 1;
+	width:1200px;
+	overflow: hidden;
+}
+
+
+.content .content_padding
+{
+  margin:9px;
+  width:1182px;
+  min-height:800px;
+ /*  background:#c0c0c0; */
+}
+
+.content .new_div
+{
+	display:inline-block;
+    margin-top:10px;;
+	width:390px;
+	height:350px;
+	overflow:hidden;
+}
+
+.content .new_div  .new_div_top
+{
+	display:inline-block;
+	margin-top:0;
+	width:390px;
+	height:250px;
+	overflow:hidden;
+}
+
+.content .new_div .dislike
+{
+	/* display:inline-block; */
+	display:none;
+	position:absolute;
+	height:20px;
+	width:20px;
+	overflow:hidden;
+	margin-top:0;
+	/* margin-right:0; */
+	z-index:2; 
+}
+
+
+
+.content .new_div .a_img
+{
+	display:inline-block;
+	margin:0 auto;
+	width:390px;
+	height:250px;
+    z-index:1; 
+	overflow:hidden;
+}
+
+.content .new_div img:hover
+{
+	transform:scale(1.2);
+}
+
+.content .new_div .newfoot_div
+{
+	display:inline-block;
+	width:390px;
+	height:100px;
+	background:#ffffff;
+}
+
+.content .new_div .newfoot_div:hover
+{
+   color:red;
+}
+
+.content .new_div .title_span
+{
+   font-size:13px;
+   font-family:"yoyuan";
+   text-align:center;
+} 
+
+.content .new_div .preview_span
+{
+   font-size:15px;
+} 
+
+.content .new_div .preview_image
+{
+	height:15px;
+	width:15px;
+	overflow:hidden;
+}
+
+.footer
+{
+	position:relative;
+	border-top:1px solid #c0c0c0;
+	margin:0 auto;
+	height:170px;
+	width:1200px;
+	background:#ffffff;	
+}
+
+
+.footer .foot-content
+{	
+	height:160px;
+	width:128px;
+	margin:0 auto;
+	font-size:12px;
+}
+
+
+
+/*首面修改-企业动态*/
+
+
+.modal_login , .modal_register
+{
+  position: relative;
+  margin: 150px auto 0;
+  width: 400px;
+  min-height: 250px;
+  background: #fff;
+  border: 1px solid #d0e1ee;
+  box-shadow: 0px 5px 15px rgba(159, 182, 235, 0.25);
+}
+
+.modal_login .modal_login_head,.modal_register .modal_register_head
+{
+  position: relative;
+  width:400px;
+  height: 48px;
+  line-height: 48px;
+  background: #e9eff5;
+  text-align:center
+}
+
+.modal_login .modal_login_head h4,.modal_register .modal_register_head h4
+{
+  display: inline-block;
+  font-size:18px;
+}
+
+.modal_login .modal_login_head  .guanbi,.modal_register .modal_register_head  .guanbi
+{
+  position: absolute;
+  display: block;
+  top: 0;
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: url('../images/delete.gif') no-repeat center center;
+  overflow:hidden;
+  /*cursor: pointer;*/
+}
+
+.modal_login .modal_login_head .modal-login-bottom , .modal_register .modal_register_head .modal-register-bottom
+{
+	padding-top: 20px;
+}
+
+.modal_login .modal_login_head .modal-login-bottom li ,.modal_register .modal_register_head .modal-register-bottom
+{
+ 
+  margin: 40px auto 10px;
+  width: 340px;
+}
+ .modal_login p
+ {
+  padding-top: 20px;
+  padding-left: 90px;
+  color: #999;
+ }
+ 
+ .modal_register p
+ {
+  padding-top: 20px;
+  padding-left: 70px;
+  color: #999;
+ }
+ 
+ 
+.modal_login .modal-login-bottom li span, .modal_register .modal-register-bottom li span{
+  display: inline-block;
+  vertical-align: middle;
+  width: 80px;
+  text-align: right;
+  font-size: 18px;
+  color: #666c7e;
+}
+
+
+.modal_login .modal-login-bottom li i, .modal_register .modal-register-bottom li i{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #fd4747;
+  font-style: normal;
+}
+
+/*登录,注册模态框的输入框*/
+.modal_login .modal-login-bottom li input ,.modal_register .modal-register-bottom li input{
+  display: inline-block;
+  vertical-align: middle;/* 垂直对齐方式 */
+  margin-top:2px;
+  width: 240px;
+  height: 30px;
+  text-indent: .8em;
+  border: 1px solid #c9cbcf;
+}
+
+.login_submit_input
+{
+	margin-top:10px;
+	margin-left:110px;
+	text-align:center;
+	 padding-left:0;
+}
+
+.login_reset_input
+{
+    margin-top:10px;
+    margin-left:100px;	
+    text-align:center;
+    padding-left:0;
+    
+}
+
+.register_submit_input
+{
+	margin-top:10px;
+	margin-left:50px;
+	text-align:center;
+	padding-left:0;
+}
+
+.register_reset_input
+{
+    margin-top:10px;
+    margin-left:50px;	
+    text-align:center;
+    padding-left:0;
+}
