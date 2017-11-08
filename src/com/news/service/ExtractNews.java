@@ -3,6 +3,7 @@ package com.news.service;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.DomElement;
@@ -40,8 +41,7 @@ public class ExtractNews {
 			HtmlElement div2 = div.getElementsByTagName("div").get(1);
 
 			String img = div2.getElementsByTagName("div").get(0).getElementsByTagName("img").get(0).getAttribute("src");
-			img = img.replace("//img",
-					"http://read.HTML5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img");
+			img = img.replace("//img", "http://img");
 
 			String title = div2.getElementsByTagName("div").get(0).getElementsByTagName("a").get(0)
 					.getAttribute("title");
@@ -59,10 +59,10 @@ public class ExtractNews {
 			HtmlElement contentDiv = null;
 			HtmlElement infoDiv = null;
 			for (DomElement e : divs2) {
-				if(e.getAttribute("class").equals("article-info")){
-					infoDiv = (HtmlElement)e;
+				if (e.getAttribute("class").equals("article-info")) {
+					infoDiv = (HtmlElement) e;
 				}
-					
+
 				else if (e.getAttribute("class").equals("article-content")) {
 					contentDiv = (HtmlElement) e;
 					break;
@@ -72,26 +72,28 @@ public class ExtractNews {
 			Iterable<HtmlElement> ps = contentDiv.getElementsByTagName("p");
 			List<String> pss = new ArrayList<String>();
 			for (HtmlElement p : ps) {
-				if(p.asText().contains("界面新闻"))
+				if (p.asText().contains("界面新闻"))
 					continue;
-				if(p.asXml().contains("player.html"))
+				if (p.asXml().contains("player.html"))
 					continue;
-				pss.add(p.asXml().replaceAll("//img",
-						"http://read.HTML5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img"));
+				// pss.add(p.asXml().replaceAll("//img",
+				// "http://read.HTML5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img"));
+				pss.add(p.asXml());
 
 			}
 			String keyword = contentPage.getElementByName("keywords").getAttribute("content");
 			String[] keywords = keyword.split(",");
 			List<String> keys = Arrays.asList(keywords);
-			
-			String author="";
-			String date="";
-			if(infoDiv!=null){
-				author = infoDiv.getElementsByAttribute("span","class","author").get(0).asText();
-				date = infoDiv.getElementsByAttribute("span","class","date").get(0).asText();
+
+			String author = "";
+			String date = "";
+			if (infoDiv != null) {
+				author = infoDiv.getElementsByAttribute("span", "class", "author").get(0).asText();
+				date = infoDiv.getElementsByTagName("span").get(1).asText();
 			}
-			
-			News news = new News(img, title, preview, pss.toString(), keys.toString(), author.replaceAll("·", ""), date);
+
+			News news = new News(img, title, preview, pss.toString(), keys.toString(), author.replaceAll("·", ""),
+					date);
 			return news;
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -107,8 +109,7 @@ public class ExtractNews {
 			newsList.add(news);
 		}
 	}
-	
-	
+
 	private void getUrls() {
 		try {
 			HtmlPage page = client.getPage("http://www.jiemian.com/");
@@ -138,7 +139,7 @@ public class ExtractNews {
 
 	public static void main(String[] args) {
 		ExtractNews e = new ExtractNews();
-		e.extract("http://www.jiemian.com/lists/105.html");
+		e.extract("http://www.jiemian.com/lists/32.html");
 	}
 
 }

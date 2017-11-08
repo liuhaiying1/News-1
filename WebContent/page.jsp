@@ -5,7 +5,7 @@
 <html>
 
 <head>
-<meta charset="utf-8" />
+<meta charset="UTF-8" name="referrer" content="never">
 <title>article</title>
 <script src="js/jquery-1.7.2.min.js" type="text/javascript"
 	charset="utf-8"></script>

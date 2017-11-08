@@ -5,7 +5,7 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" name="referrer" content="never">
     <title>index</title>
     <link rel="stylesheet" href="css/reset.css"/>
     <link rel="stylesheet" href="css/index.css"/>

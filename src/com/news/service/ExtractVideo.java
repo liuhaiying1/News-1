@@ -2,6 +2,7 @@ package com.news.service;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import com.gargoylesoftware.htmlunit.BrowserVersion;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.HtmlElement;
@@ -56,8 +57,6 @@ public class ExtractVideo {
 				String img = e.getElementsByTagName("img").get(0).getAttribute("src");
 				String title = e.getElementsByTagName("img").get(0).getAttribute("alt");
 				Video video = new Video();
-				img = img.replace("//img",
-						"http://read.HTML5.qq.com/image?src=forum&q=5&r=0&imgflag=7&imageUrl=http://img");
 				video.setImg(img);
 				video.setTitle(title);
 				videoList.add(video);
